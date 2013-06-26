@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+    version="2.1">
+
+	<application>
+		
+		<!-- Spring EL Resolver -->
+		<el-resolver>
+			org.springframework.web.jsf.el.SpringBeanFacesELResolver
+		</el-resolver>
+		
+		
+		<!-- Internacionalização
+		<resource-bundle>
+			<base-name>
+				br.com.triadworks.issuetracker.resources.AppMessages
+			</base-name>
+			<var>text</var>
+		</resource-bundle>
+		<message-bundle>
+			br.com.triadworks.issuetracker.resources.Messages
+		</message-bundle>
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+			<supported-locale>pt_BR</supported-locale>
+		</locale-config>
+		-->
+    </application>
+     
+    
+    <navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/pages/login.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+    </navigation-rule>
+    
+</faces-config>
+
+
+
+
+
+
+
+
+
